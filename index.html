@@ -268,6 +268,35 @@ h1 mark{background:linear-gradient(transparent 56%,var(--sun) 56% 92%,transparen
 .foot{color:var(--soft)}
 @media (max-width:1020px){.cloud.a{right:-14px;top:-30px}.cloud.b{left:-14px}.blob{opacity:.7}}
 @media (max-width:640px){.cloud{width:84px;height:50px}.cloud.b{display:none}.stagewrap::before{inset:-20px -10px -18px -10px}.cf:nth-of-type(n+14){display:none}.tile .face{width:84px;height:68px}}
+
+/* ===== v7: menu e páginas internas ===== */
+.nav{display:flex;justify-content:space-between;align-items:center;gap:12px 22px;flex-wrap:wrap;margin-bottom:30px}
+.brand{display:flex;flex-direction:column;text-decoration:none;color:var(--navy);font-family:var(--display);font-size:28px;line-height:1}
+.brand small{font-family:var(--mono);font-weight:600;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ln);margin-top:4px}
+.links{display:flex;gap:10px;flex-wrap:wrap}
+.links a{padding:8px 15px;background:#fff;color:var(--navy);border:2px solid var(--ln);border-radius:99px;box-shadow:0 3px 0 var(--ln);font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;text-decoration:none}
+.links a:hover{background:var(--sky)}
+.links a[aria-current="page"]{background:var(--sun)}
+.links a:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.page .hero{max-width:860px}
+.page h1{font-size:clamp(36px,6vw,72px)}
+.sec{margin-top:46px}
+.sec h2{font-size:clamp(28px,4.4vw,46px);line-height:1.02;margin:0 0 12px}
+.sec>p{max-width:62ch;margin:0 0 14px}
+.slab{display:flex;flex-direction:column;gap:10px}
+.slab .ico{width:116px;height:92px;margin-bottom:2px}
+.slab h3{font-size:clamp(24px,3vw,32px)}
+.slab p{margin:0}
+.cta.cream{background:#fff4dc;color:var(--ink);box-shadow:0 5px 0 #b9a97f,inset 0 2px 0 #fff}
+.cta.cream:hover{background:#fff}
+.btnrow{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;padding-bottom:5px}
+.card.dd .cta.cream{color:var(--ink)}
+.page .foot{margin-top:50px}
+.lead{font-size:clamp(17px,2.2vw,21px);max-width:60ch;margin:0 0 6px}
+.sub{font-size:clamp(24px,3.6vw,38px);line-height:1.05;margin:34px 0 12px}
+.cards.c6{grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))}
+.card .big2{display:block;font-family:var(--display);font-size:22px;line-height:1.05;margin:8px 0 4px}
+.slab .chip{align-self:flex-start}
 </style>
 </head>
 <body>
@@ -367,6 +396,12 @@ h1 mark{background:linear-gradient(transparent 56%,var(--sun) 56% 92%,transparen
 <i class="dt" style="left:81%;top:73%;width:8px;height:8px;background:#a6d8e6"></i>
 <i class="dt" style="left:77%;top:76%;width:8px;height:8px;background:#f6a9b8"></i>
 </div>
+    <nav class="nav" aria-label="Principal">
+    <a class="brand" href="./">Ateliê Maker<small>Pelotas · RS</small></a>
+    <div class="links">
+      <a href="./" aria-current="page">Início</a><a href="cursos.html">Cursos</a><a href="projetos.html">Projetos</a><a href="quem-somos.html">Quem somos</a><a href="contato.html">Contato</a>
+    </div>
+  </nav>
   <header class="head">
     <div class="tallywrap" aria-label="Seus três níveis">
       <span class="bar1" aria-hidden="true"></span>
@@ -447,19 +482,31 @@ h1 mark{background:linear-gradient(transparent 56%,var(--sun) 56% 92%,transparen
   <section class="drawer" id="atelie" aria-label="Dentro do Ateliê Maker">
     <div class="lock" id="lock">
       <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="14" width="22" height="15" rx="3" fill="#f2c52e" stroke="#3a2d2a" stroke-width="2.4"/><path d="M10 14V10a6 6 0 0 1 12 0v4" fill="none" stroke="#3a2d2a" stroke-width="2.6"/><circle cx="16" cy="21.5" r="2.2" fill="#3a2d2a"/></svg>
-      <p>Aqui dentro estão os cursos, o jeito de ensinar e o contato do ateliê. A gaveta abre quando a lâmpada da logo acender nos três níveis.</p>
+      <p>Aqui dentro está o programa do ateliê e o jeito de falar com a gente. A gaveta abre quando a lâmpada da logo acender nos três níveis.</p>
     </div>
     <div class="inside" id="inside" hidden>
-      <h2 id="insideTitle" tabindex="-1">Dentro do Ateliê</h2>
+      <h2 id="insideTitle" tabindex="-1">Materializamos o imaginário</h2>
       <p class="skipnote" id="skipnote" hidden>Tudo bem não saber ligar ainda. É exatamente isso que se aprende aqui. Quando quiser, volte lá em cima e acenda a lâmpada.</p>
+      <p class="lead">Um programa de cultura maker para escolas que transforma curiosidade em criação, com arte, eletrônica e programação.</p>
+      <h3 class="sub">Aprender é colocar a mão no mundo.</h3>
       <div class="cards">
-        <article class="card y"><h3>Aulas extraclasse</h3><p>Robótica, eletrônica e programação integradas ao calendário escolar, para crianças e jovens.</p></article>
-        <article class="card p"><h3>Mão na Massa</h3><p>Oficinas de eletrônica e Arduino. Cada encontro parte de um desafio prático, passa pela experimentação com materiais reais e termina num objeto que funciona. Quatro luzes marcam a evolução:</p>
-          <div class="chips"><span class="chip"><i style="background:#e5483b"></i>Vermelha</span><span class="chip"><i style="background:#4cb866"></i>Verde</span><span class="chip"><i style="background:#2b78b5"></i>Azul</span><span class="chip"><i style="background:#fff"></i>Branca</span></div></article>
-        <article class="card t"><h3>Arduino</h3><p>Microcontrolador, sensores e a construção coletiva de um objeto artístico com materiais reutilizados.</p></article>
-        <article class="card"><h3>Sob encomenda</h3><p>Objetos e instalações interativas para escolas, empresas, eventos e espaços culturais. Também consultoria e formação em tecnologia criativa para educadores.</p></article>
-        <article class="card b"><h3>Como a gente ensina</h3><p>Aprendizagem baseada em projetos. O erro é parte do processo. Eletrônica e programação com o olhar das artes visuais.</p></article>
-        <article class="card d"><h3>Fale com a gente</h3><p>Pelotas, RS<br>Instagram: <a href="https://www.instagram.com/ateliemaker/">@ateliemaker</a><br>E-mail: ateliemkr@gmail.com</p></article>
+        <article class="card y"><span class="chip">01</span><span class="big2">Imaginar, testar, refazer.</span></article>
+        <article class="card p"><span class="chip">02</span><span class="big2">Circuitos que contam histórias.</span></article>
+        <article class="card t"><span class="chip">03</span><span class="big2">Criar junto muda tudo.</span></article>
+      </div>
+      <h3 class="sub">Uma ideia só existe quando ganha corpo.</h3>
+      <p>Cada experiência aproxima estudantes de linguagens, ferramentas e perguntas que atravessam o presente.</p>
+      <div class="cards c6">
+        <article class="card"><h3>Pensamento científico, crítico e criativo</h3><p>Por meio da investigação e da resolução de problemas.</p></article>
+        <article class="card p"><h3>Repertório cultural</h3><p>Ao articular arte, estética e tecnologia.</p></article>
+        <article class="card y"><h3>Comunicação</h3><p>Incentivando a escuta, a troca de ideias e a apresentação de processos.</p></article>
+        <article class="card t"><h3>Cultura digital</h3><p>Com uso crítico e criativo de tecnologias.</p></article>
+        <article class="card b"><h3>Trabalho e projeto de vida</h3><p>Ao valorizar autonomia, protagonismo e colaboração.</p></article>
+        <article class="card"><h3>Responsabilidade e cidadania</h3><p>Promovendo o fazer coletivo e o respeito aos processos.</p></article>
+      </div>
+      <div class="cards" style="grid-template-columns:1fr;margin-top:30px">
+        <article class="card d"><h3>Vamos imaginar uma escola que também é ateliê?</h3><p>Idealizado pelo Dr. André Barbachan, artista visual e doutor em Poéticas Visuais, o Ateliê Maker cria experiências de aprendizagem para escolas que querem experimentar mais.</p>
+          <div class="btnrow"><a class="cta" href="https://wa.me/5553981183795?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Ateli%C3%AA%20MAKER%20e%20gostaria%20de%20conversar.">Conversar com o Ateliê</a><a class="cta cream" href="cursos.html">Ver cursos</a><a class="cta cream" href="projetos.html">Ver projetos</a></div></article>
       </div>
     </div>
   </section>

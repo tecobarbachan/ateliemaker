@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Cursos — Ateliê Maker</title>
+<meta name="description" content="Cursos e experiências do Ateliê Maker para escolas: Mão na Massa e Arduino.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Hanken+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+</head>
+<body class="page">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="f1" viewBox="0 0 100 100"><g stroke="#6b3a1e" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round">
+      <path fill="#8fcf9f" d="M24 30C8 33 3 62 14 78C23 74 29 58 31 42Z"/><path fill="#8fcf9f" d="M76 30C92 33 97 62 86 78C77 74 71 58 69 42Z"/>
+      <path fill="#c9ecc7" d="M27 30C36 18 64 18 73 30C84 46 82 72 69 82C58 90 42 90 31 82C18 72 16 46 27 30Z"/>
+      <path fill="none" d="M33 44L45 48M67 44L55 48"/><circle cx="41" cy="55" r="3" fill="#6b3a1e" stroke="none"/><circle cx="59" cy="55" r="3" fill="#6b3a1e" stroke="none"/><path fill="none" d="M44 70Q50 74 56 70"/></g></symbol>
+    <symbol id="f2" viewBox="0 0 100 100"><g stroke="#6b3a1e" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round">
+      <path fill="#e66d9f" d="M22 30C10 16 3 36 11 50C18 48 22 42 25 36Z"/><path fill="#e66d9f" d="M78 30C90 16 97 36 89 50C82 48 78 42 75 36Z"/>
+      <path fill="#f9b6d3" d="M26 32C32 16 68 16 74 32C90 38 92 64 78 78C66 92 34 92 22 78C8 64 10 38 26 32Z"/>
+      <ellipse cx="39" cy="52" rx="3" ry="4.2" fill="#6b3a1e" stroke="none"/><ellipse cx="61" cy="52" rx="3" ry="4.2" fill="#6b3a1e" stroke="none"/>
+      <ellipse cx="50" cy="69" rx="6.5" ry="7.5" fill="#6b3a1e"/><ellipse cx="50" cy="72" rx="3.6" ry="3" fill="#f27a7a" stroke="none"/>
+      <circle cx="30" cy="63" r="4" fill="#f27a7a" stroke="none" opacity=".6"/><circle cx="70" cy="63" r="4" fill="#f27a7a" stroke="none" opacity=".6"/></g></symbol>
+    <symbol id="f3" viewBox="0 0 100 100"><g stroke="#6b3a1e" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round">
+      <path fill="#55bfb4" d="M27 30C9 34 6 70 19 86C28 80 31 58 33 42Z"/><path fill="#55bfb4" d="M73 30C91 34 94 70 81 86C72 80 69 58 67 42Z"/>
+      <path fill="#b4efe8" d="M28 30C36 19 64 19 72 30C82 46 80 70 68 80C58 88 42 88 32 80C20 70 18 46 28 30Z"/>
+      <path fill="none" d="M35 53Q40 47 45 53M55 53Q60 47 65 53"/><path fill="none" d="M40 66Q50 77 60 66"/>
+      <circle cx="31" cy="62" r="3.6" fill="#f5a3b4" stroke="none" opacity=".7"/><circle cx="69" cy="62" r="3.6" fill="#f5a3b4" stroke="none" opacity=".7"/></g></symbol>
+
+    <symbol id="i1" viewBox="0 0 100 80"><g stroke="#d24f3a" stroke-width="2.2" stroke-linejoin="round"><polygon fill="#e9dcc0" points="50,52 92,30 92,44 50,66"/><polygon fill="#fffaf0" points="8,30 50,52 50,66 8,44"/><polygon fill="#f7ecd6" points="50,8 92,30 50,52 8,30"/><polygon fill="#14214a" points="50,17 79,31 50,45 21,31"/><polygon fill="#f2922e" stroke="none" points="42,26 58,31 44,38"/></g></symbol>
+    <symbol id="i2" viewBox="0 0 100 80"><g stroke="#d24f3a" stroke-width="2.2" stroke-linejoin="round"><polygon fill="#7bbfd6" points="50,52 92,30 92,44 50,66"/><polygon fill="#fffaf0" points="8,30 50,52 50,66 8,44"/><polygon fill="#cdeaf2" points="50,8 92,30 50,52 8,30"/><polygon fill="#fffaf0" points="30,27 36,24 40,27 46,24 52,27 46,30 52,33 46,36 40,33 34,36 28,33 34,30"/><ellipse cx="66" cy="28" rx="6" ry="3.4" fill="#f2922e"/><ellipse cx="76" cy="33" rx="6" ry="3.4" fill="#2f86b0"/></g></symbol>
+    <symbol id="i3" viewBox="0 0 100 80"><g stroke="#d24f3a" stroke-width="2.2" stroke-linejoin="round"><polygon fill="#5fa86a" points="50,52 92,30 92,44 50,66"/><polygon fill="#e9f5d8" points="8,30 50,52 50,66 8,44"/><polygon fill="#8fd35c" points="50,8 92,30 50,52 8,30"/><polygon fill="#14214a" points="50,20 70,30 50,40 30,30"/><g fill="#fbdf4b" stroke-width="1.4"><polygon points="20,31 25,28 29,30 24,33"/><polygon points="26,34 31,31 35,33 30,36"/><polygon points="68,36 73,33 77,35 72,38"/><polygon points="74,32 79,29 83,31 78,34"/></g></g></symbol>
+    <symbol id="cf-bolt" viewBox="0 0 24 32"><polygon points="14,1 2,18 11,18 8,31 22,12 13,12" fill="#fbdf4b" stroke="#d24f3a" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="cf-cube" viewBox="0 0 30 34"><g stroke="#d24f3a" stroke-width="1.8" stroke-linejoin="round"><polygon points="15,2 28,9 15,16 2,9" fill="#f7ecd6"/><polygon points="2,9 15,16 15,32 2,25" fill="#fffaf0"/><polygon points="15,16 28,9 28,25 15,32" fill="#ead9b5"/></g></symbol>
+    <symbol id="cf-tri" viewBox="0 0 30 30"><polygon points="4,24 27,16 13,2" fill="#a6d8e6" stroke="#d24f3a" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="cf-note" viewBox="0 0 26 32"><path d="M9 5L21 2V21" fill="none" stroke="#14214a" stroke-width="2.6" stroke-linecap="round"/><ellipse cx="6.5" cy="25" rx="5.5" ry="4" fill="#14214a"/><ellipse cx="18.5" cy="22" rx="5.5" ry="4" fill="#14214a"/></symbol>
+    <symbol id="cf-ring" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="#f2922e" stroke-width="4"/><circle cx="12" cy="12" r="10.5" fill="none" stroke="#d24f3a" stroke-width="1.2"/></symbol>
+    <symbol id="cloud" viewBox="0 0 120 70"><g stroke="#d24f3a" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path fill="#e6f4f8" d="M24 62C6 62 2 40 20 36C18 16 42 10 52 26C60 6 94 10 92 34C112 30 120 56 100 62Z"/><path fill="none" d="M30 50C36 44 44 44 48 48M66 40C72 34 80 36 82 42"/></g></symbol>
+  </defs>
+</svg>
+<main class="desk">
+<div class="bg" aria-hidden="true">
+<i class="blob" style="left:-3%;top:22%;width:380px;height:380px"></i>
+<i class="blob" style="left:66%;top:18%;width:300px;height:300px"></i>
+<i class="blob" style="left:-6%;top:66%;width:260px;height:260px"></i>
+<i class="blob" style="left:78%;top:52%;width:360px;height:360px"></i>
+<i class="blob" style="left:30%;top:2%;width:200px;height:200px"></i>
+<svg class="cf" style="left:4%;top:20%;width:26px;height:35px;transform:rotate(25deg)"><use href="#cf-bolt"/></svg>
+
+<svg class="cf" style="left:7%;top:41%;width:26px;height:26px;transform:rotate(-19deg)"><use href="#cf-tri"/></svg>
+
+<svg class="cf" style="left:3%;top:70%;width:22px;height:22px;transform:rotate(-24deg)"><use href="#cf-ring"/></svg>
+
+
+
+
+
+
+
+
+
+
+<svg class="cf" style="left:94%;top:35%;width:26px;height:35px;transform:rotate(-10deg)"><use href="#cf-bolt"/></svg>
+<svg class="cf" style="left:90%;top:48%;width:33px;height:37px;transform:rotate(7deg)"><use href="#cf-cube"/></svg>
+<svg class="cf" style="left:95%;top:62%;width:26px;height:26px;transform:rotate(3deg)"><use href="#cf-tri"/></svg>
+
+
+
+
+
+
+<svg class="cf" style="left:92%;top:13%;width:25px;height:25px;transform:rotate(-10deg)"><use href="#cf-ring"/></svg>
+<svg class="cf" style="left:2%;top:48%;width:20px;height:27px;transform:rotate(2deg)"><use href="#cf-bolt"/></svg>
+<svg class="cf" style="left:97%;top:22%;width:29px;height:33px;transform:rotate(-29deg)"><use href="#cf-cube"/></svg>
+
+
+<svg class="cf" style="left:8%;top:12%;width:19px;height:19px;transform:rotate(24deg)"><use href="#cf-ring"/></svg>
+
+<i class="dt" style="left:4%;top:15%;width:8px;height:8px;background:#f6a9b8"></i>
+
+
+
+
+
+
+<i class="dt" style="left:92%;top:27%;width:6px;height:6px;background:#8fd35c"></i>
+
+
+
+<i class="dt" style="left:95%;top:31%;width:12px;height:12px;background:#a6d8e6"></i>
+
+
+<i class="dt" style="left:2%;top:49%;width:10px;height:10px;background:#f2922e"></i>
+<i class="dt" style="left:4%;top:41%;width:8px;height:8px;background:#fbdf4b"></i>
+
+
+
+
+
+
+
+
+
+</div>
+  <nav class="nav" aria-label="Principal">
+    <a class="brand" href="./">Ateliê Maker<small>Pelotas · RS</small></a>
+    <div class="links">
+      <a href="./">Início</a><a href="cursos.html" aria-current="page">Cursos</a><a href="projetos.html">Projetos</a><a href="quem-somos.html">Quem somos</a><a href="contato.html">Contato</a>
+    </div>
+  </nav>
+  <header class="hero">
+    <p class="kick">Cursos e experiências</p>
+    <h1>Aprender fazendo, <mark>criar pensando.</mark></h1>
+    <p class="lede">Percursos para escolas que desejam aproximar arte, tecnologia e investigação do cotidiano de estudantes.</p>
+  </header>
+  <section class="sec">
+    <h2>Práticas que começam com uma pergunta.</h2>
+    <p>Oficinas, laboratórios e formações pensadas junto a cada escola, com diferentes durações, idades e desafios de criação.</p>
+    <div class="cards">
+      <article class="card y slab"><svg class="ico" aria-hidden="true"><use href="#i1"/></svg><h3>Ateliê Maker · Mão na Massa</h3><p>Curso inicial do Ateliê Maker, porta de entrada para a experiência prática com diferentes técnicas da cultura maker: arte, tecnologia e experimentação.</p><span class="chip">Módulos 1 e 2 · 6 meses cada</span><div class="btnrow"><a class="cta" href="https://wa.me/5553981183795?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Ateli%C3%AA%20MAKER%20e%20gostaria%20de%20conversar.">Falar no WhatsApp</a></div></article>
+      <article class="card t slab"><svg class="ico" aria-hidden="true"><use href="#i3"/></svg><h3>Ateliê Maker · Arduino</h3><p>Curso introdutório ao uso do Arduino como ferramenta criativa: eletrônica, sensores, atuadores e programação aplicados à cultura maker.</p><span class="chip">Módulos 1 e 2 · 6 meses cada</span><div class="btnrow"><a class="cta" href="https://wa.me/5553981183795?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Ateli%C3%AA%20MAKER%20e%20gostaria%20de%20conversar.">Falar no WhatsApp</a></div></article>
+    </div>
+  </section>
+  <p class="foot">© 2026 Ateliê Maker · Pelotas / RS / Brasil · Materializamos o imaginário</p>
+</main>
+</body>
+</html>
