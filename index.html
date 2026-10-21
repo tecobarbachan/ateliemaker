@@ -212,6 +212,62 @@ button.skipbtn:focus-visible{outline-color:var(--yellow)}
   .lock{align-items:flex-start}
 }
 @media (prefers-reduced-motion:reduce){.flow,.ray.on,.n.now i,.open .card{animation:none}.logo-word,.logo-tag,.ray,.slot .fill,.prog i{transition:none}}
+/* ===== v6: referência isométrica (traço coral fino, blobs, confete) ===== */
+:root{--paper:#fffdf6;--ink:#14213d;--soft:#4c5878;--ln:#d24f3a;--sky:#cdeaf2;--sky2:#a6d8e6;--cream:#f7ecd6;--sun:#fbdf4b;--leaf:#a8dc72;--tang:#f2922e;--navy:#14214a;--blue:#2f86b0;--orange:var(--tang);--yellow:var(--sun);--pink:#f6a9b8;--teal:#9edfe8;--mint:#b7e08e;--dark:var(--navy)}
+body{background-color:var(--paper);overflow-x:clip;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .3  0 0 0 0 .35  0 0 0 0 .4  0 0 0 .09 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"),radial-gradient(rgba(47,134,176,.16) 1.3px,transparent 1.7px)}
+.desk{border:0;outline:0;border-radius:0;padding:clamp(4px,1.5vw,22px)}
+.desk>*:not(.bg){position:relative;z-index:1}
+.bg{position:absolute;inset:0 -14px;z-index:0;pointer-events:none;overflow:hidden}
+.blob{position:absolute;border-radius:50%;background-color:var(--sky);background-image:radial-gradient(rgba(255,255,255,.85) 1px,transparent 1.5px);background-size:6px 6px}
+.cf{position:absolute;display:block;overflow:visible}
+.dt{position:absolute;border-radius:50%}
+h1,h2,h3{color:var(--navy)}
+.kick{background:var(--sun);border:2px solid var(--ln);color:var(--navy)}
+h1 mark{background:linear-gradient(transparent 56%,var(--sun) 56% 92%,transparent 92%)}
+.lede{color:var(--soft)}
+.n{color:var(--blue)}.n i{border-color:var(--blue)}
+.n.now i{background:var(--sun);border-color:var(--ln)}.n.done i{background:var(--leaf);border-color:var(--ln)}
+.ticket{background:var(--sun);border-color:var(--ln);color:var(--navy);box-shadow:4px 4px 0 var(--ln)}
+.ticket::before,.ticket::after{background:var(--paper);border-color:var(--ln)}
+.ticket div{border-top-color:var(--ln)}
+.tile,.note,.card,.win{border:2.5px solid var(--ln);box-shadow:7px 7px 0 var(--cream),7px 7px 0 2.5px var(--ln);transform:none;color:var(--navy)}
+.tile{background:var(--sun);border-radius:8px}
+.tile.pk{background:var(--sky)}
+.tile.tl{background:var(--leaf)}
+.tile .face{width:100px;height:80px;margin:0 auto 4px;transform:none}
+.note{background:#fff7e3;border-radius:8px}
+.note h3{color:var(--navy)}
+.note p{background:repeating-linear-gradient(transparent 0 22px,rgba(210,79,58,.35) 22px 24px)}
+.spiral ellipse{stroke:var(--ln)}
+.zig path{stroke:var(--ln)}
+.coiled path{stroke:var(--blue)}
+.burst polygon{stroke:var(--ln)}
+.burst span{color:var(--navy)}
+.stagewrap{isolation:isolate}
+.stagewrap::before{inset:-78px -96px -64px -92px;z-index:-1;border-radius:0;transform:none;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300' preserveAspectRatio='none'><path d='M30 150C6 84 60 22 150 36C220 48 262 14 326 44C392 76 400 170 350 224C302 272 234 244 172 272C96 300 54 232 30 150Z' fill='%23fbdf4b' stroke='%23d24f3a' stroke-width='3' vector-effect='non-scaling-stroke'/></svg>") center/100% 100% no-repeat}
+.stage{background:#fffaf0;border:2.5px solid var(--ln);border-radius:14px;box-shadow:10px 10px 0 var(--cream),10px 10px 0 2.5px var(--ln)}
+.cloud{position:absolute;z-index:3;pointer-events:none;width:128px;height:76px}
+.cloud.a{right:-46px;top:-34px}.cloud.b{left:-50px;bottom:-26px;width:104px;height:62px}
+.status{background:var(--navy);color:var(--sun);border:2.5px solid var(--ln);box-shadow:none}
+.status .k{color:var(--sky2)}
+.status.bad{background:#3a1f2a;color:#ffc2b8}
+.win{background:var(--sun);border-radius:10px}
+.dock{background:var(--navy);border-radius:10px}
+.slot{border-color:#79c4dc;background-image:linear-gradient(rgba(130,200,230,.32) 1.5px,transparent 1.5px),linear-gradient(90deg,rgba(130,200,230,.32) 1.5px,transparent 1.5px)}
+.slot.done .strip{background:var(--leaf)}
+.slot .fill{background:var(--leaf)}
+.slot .num{color:var(--sky)}
+.vert{color:var(--tang)}
+.lock{border-color:var(--ln);background:rgba(255,255,255,.6)}
+.card{border-radius:8px;background:#fffaf0}
+.card.y{background:var(--sun)}.card.p{background:var(--sky)}.card.t{background:var(--leaf)}.card.b{background:var(--tang);color:var(--navy)}.card.d{background:var(--navy);color:var(--cream)}
+.card h3{color:inherit}
+.chip{border-color:var(--ln)}
+.skipnote{background:var(--leaf);border-color:var(--ln)}
+.foot{color:var(--soft)}
+@media (max-width:1020px){.cloud.a{right:-14px;top:-30px}.cloud.b{left:-14px}.blob{opacity:.7}}
+@media (max-width:640px){.cloud{width:84px;height:50px}.cloud.b{display:none}.stagewrap::before{inset:-20px -10px -18px -10px}.cf:nth-of-type(n+14){display:none}.tile .face{width:84px;height:68px}}
 </style>
 </head>
 <body>
@@ -234,10 +290,83 @@ button.skipbtn:focus-visible{outline-color:var(--yellow)}
       <path fill="#b4efe8" d="M28 30C36 19 64 19 72 30C82 46 80 70 68 80C58 88 42 88 32 80C20 70 18 46 28 30Z"/>
       <path fill="none" d="M35 53Q40 47 45 53M55 53Q60 47 65 53"/><path fill="none" d="M40 66Q50 77 60 66"/>
       <circle cx="31" cy="62" r="3.6" fill="#f5a3b4" stroke="none" opacity=".7"/><circle cx="69" cy="62" r="3.6" fill="#f5a3b4" stroke="none" opacity=".7"/></g></symbol>
+
+    <symbol id="i1" viewBox="0 0 100 80"><g stroke="#d24f3a" stroke-width="2.2" stroke-linejoin="round"><polygon fill="#e9dcc0" points="50,52 92,30 92,44 50,66"/><polygon fill="#fffaf0" points="8,30 50,52 50,66 8,44"/><polygon fill="#f7ecd6" points="50,8 92,30 50,52 8,30"/><polygon fill="#14214a" points="50,17 79,31 50,45 21,31"/><polygon fill="#f2922e" stroke="none" points="42,26 58,31 44,38"/></g></symbol>
+    <symbol id="i2" viewBox="0 0 100 80"><g stroke="#d24f3a" stroke-width="2.2" stroke-linejoin="round"><polygon fill="#7bbfd6" points="50,52 92,30 92,44 50,66"/><polygon fill="#fffaf0" points="8,30 50,52 50,66 8,44"/><polygon fill="#cdeaf2" points="50,8 92,30 50,52 8,30"/><polygon fill="#fffaf0" points="30,27 36,24 40,27 46,24 52,27 46,30 52,33 46,36 40,33 34,36 28,33 34,30"/><ellipse cx="66" cy="28" rx="6" ry="3.4" fill="#f2922e"/><ellipse cx="76" cy="33" rx="6" ry="3.4" fill="#2f86b0"/></g></symbol>
+    <symbol id="i3" viewBox="0 0 100 80"><g stroke="#d24f3a" stroke-width="2.2" stroke-linejoin="round"><polygon fill="#5fa86a" points="50,52 92,30 92,44 50,66"/><polygon fill="#e9f5d8" points="8,30 50,52 50,66 8,44"/><polygon fill="#8fd35c" points="50,8 92,30 50,52 8,30"/><polygon fill="#14214a" points="50,20 70,30 50,40 30,30"/><g fill="#fbdf4b" stroke-width="1.4"><polygon points="20,31 25,28 29,30 24,33"/><polygon points="26,34 31,31 35,33 30,36"/><polygon points="68,36 73,33 77,35 72,38"/><polygon points="74,32 79,29 83,31 78,34"/></g></g></symbol>
+    <symbol id="cf-bolt" viewBox="0 0 24 32"><polygon points="14,1 2,18 11,18 8,31 22,12 13,12" fill="#fbdf4b" stroke="#d24f3a" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="cf-cube" viewBox="0 0 30 34"><g stroke="#d24f3a" stroke-width="1.8" stroke-linejoin="round"><polygon points="15,2 28,9 15,16 2,9" fill="#f7ecd6"/><polygon points="2,9 15,16 15,32 2,25" fill="#fffaf0"/><polygon points="15,16 28,9 28,25 15,32" fill="#ead9b5"/></g></symbol>
+    <symbol id="cf-tri" viewBox="0 0 30 30"><polygon points="4,24 27,16 13,2" fill="#a6d8e6" stroke="#d24f3a" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="cf-note" viewBox="0 0 26 32"><path d="M9 5L21 2V21" fill="none" stroke="#14214a" stroke-width="2.6" stroke-linecap="round"/><ellipse cx="6.5" cy="25" rx="5.5" ry="4" fill="#14214a"/><ellipse cx="18.5" cy="22" rx="5.5" ry="4" fill="#14214a"/></symbol>
+    <symbol id="cf-ring" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="#f2922e" stroke-width="4"/><circle cx="12" cy="12" r="10.5" fill="none" stroke="#d24f3a" stroke-width="1.2"/></symbol>
+    <symbol id="cloud" viewBox="0 0 120 70"><g stroke="#d24f3a" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path fill="#e6f4f8" d="M24 62C6 62 2 40 20 36C18 16 42 10 52 26C60 6 94 10 92 34C112 30 120 56 100 62Z"/><path fill="none" d="M30 50C36 44 44 44 48 48M66 40C72 34 80 36 82 42"/></g></symbol>
   </defs>
 </svg>
 
 <main class="desk">
+<div class="bg" aria-hidden="true">
+<i class="blob" style="left:-3%;top:22%;width:380px;height:380px"></i>
+<i class="blob" style="left:66%;top:18%;width:300px;height:300px"></i>
+<i class="blob" style="left:-6%;top:66%;width:260px;height:260px"></i>
+<i class="blob" style="left:78%;top:52%;width:360px;height:360px"></i>
+<i class="blob" style="left:30%;top:2%;width:200px;height:200px"></i>
+<svg class="cf" style="left:4%;top:20%;width:26px;height:35px;transform:rotate(25deg)"><use href="#cf-bolt"/></svg>
+<svg class="cf" style="left:14%;top:27%;width:33px;height:37px;transform:rotate(-2deg)"><use href="#cf-cube"/></svg>
+<svg class="cf" style="left:7%;top:41%;width:26px;height:26px;transform:rotate(-19deg)"><use href="#cf-tri"/></svg>
+<svg class="cf" style="left:11%;top:55%;width:26px;height:32px;transform:rotate(10deg)"><use href="#cf-note"/></svg>
+<svg class="cf" style="left:3%;top:70%;width:22px;height:22px;transform:rotate(-24deg)"><use href="#cf-ring"/></svg>
+<svg class="cf" style="left:16%;top:83%;width:26px;height:35px;transform:rotate(-11deg)"><use href="#cf-bolt"/></svg>
+
+<svg class="cf" style="left:33%;top:60%;width:23px;height:23px;transform:rotate(8deg)"><use href="#cf-tri"/></svg>
+
+
+
+<svg class="cf" style="left:66%;top:30%;width:23px;height:26px;transform:rotate(-27deg)"><use href="#cf-cube"/></svg>
+
+<svg class="cf" style="left:80%;top:15%;width:20px;height:25px;transform:rotate(8deg)"><use href="#cf-note"/></svg>
+<svg class="cf" style="left:88%;top:24%;width:19px;height:19px;transform:rotate(19deg)"><use href="#cf-ring"/></svg>
+<svg class="cf" style="left:94%;top:35%;width:26px;height:35px;transform:rotate(-10deg)"><use href="#cf-bolt"/></svg>
+<svg class="cf" style="left:90%;top:48%;width:33px;height:37px;transform:rotate(7deg)"><use href="#cf-cube"/></svg>
+<svg class="cf" style="left:95%;top:62%;width:26px;height:26px;transform:rotate(3deg)"><use href="#cf-tri"/></svg>
+<svg class="cf" style="left:86%;top:71%;width:20px;height:25px;transform:rotate(10deg)"><use href="#cf-note"/></svg>
+<svg class="cf" style="left:74%;top:76%;width:25px;height:25px;transform:rotate(1deg)"><use href="#cf-ring"/></svg>
+<svg class="cf" style="left:62%;top:68%;width:18px;height:24px;transform:rotate(12deg)"><use href="#cf-bolt"/></svg>
+<svg class="cf" style="left:50%;top:75%;width:23px;height:26px;transform:rotate(-1deg)"><use href="#cf-cube"/></svg>
+<svg class="cf" style="left:38%;top:80%;width:29px;height:29px;transform:rotate(-4deg)"><use href="#cf-tri"/></svg>
+<svg class="cf" style="left:23%;top:74%;width:18px;height:22px;transform:rotate(15deg)"><use href="#cf-note"/></svg>
+<svg class="cf" style="left:92%;top:13%;width:25px;height:25px;transform:rotate(-10deg)"><use href="#cf-ring"/></svg>
+<svg class="cf" style="left:2%;top:48%;width:20px;height:27px;transform:rotate(2deg)"><use href="#cf-bolt"/></svg>
+<svg class="cf" style="left:97%;top:22%;width:29px;height:33px;transform:rotate(-29deg)"><use href="#cf-cube"/></svg>
+<svg class="cf" style="left:44%;top:57%;width:23px;height:23px;transform:rotate(6deg)"><use href="#cf-tri"/></svg>
+<svg class="cf" style="left:70%;top:45%;width:18px;height:22px;transform:rotate(-5deg)"><use href="#cf-note"/></svg>
+<svg class="cf" style="left:8%;top:12%;width:19px;height:19px;transform:rotate(24deg)"><use href="#cf-ring"/></svg>
+<i class="dt" style="left:39%;top:64%;width:6px;height:6px;background:#a6d8e6"></i>
+<i class="dt" style="left:4%;top:15%;width:8px;height:8px;background:#f6a9b8"></i>
+
+<i class="dt" style="left:50%;top:65%;width:12px;height:12px;background:#f2922e"></i>
+<i class="dt" style="left:11%;top:40%;width:10px;height:10px;background:#fbdf4b"></i>
+<i class="dt" style="left:45%;top:26%;width:10px;height:10px;background:#2f86b0"></i>
+
+<i class="dt" style="left:17%;top:32%;width:8px;height:8px;background:#f6a9b8"></i>
+<i class="dt" style="left:92%;top:27%;width:6px;height:6px;background:#8fd35c"></i>
+<i class="dt" style="left:9%;top:74%;width:12px;height:12px;background:#f2922e"></i>
+<i class="dt" style="left:24%;top:86%;width:8px;height:8px;background:#fbdf4b"></i>
+<i class="dt" style="left:59%;top:80%;width:8px;height:8px;background:#2f86b0"></i>
+<i class="dt" style="left:95%;top:31%;width:12px;height:12px;background:#a6d8e6"></i>
+<i class="dt" style="left:84%;top:64%;width:6px;height:6px;background:#f6a9b8"></i>
+<i class="dt" style="left:52%;top:68%;width:8px;height:8px;background:#8fd35c"></i>
+<i class="dt" style="left:2%;top:49%;width:10px;height:10px;background:#f2922e"></i>
+<i class="dt" style="left:4%;top:41%;width:8px;height:8px;background:#fbdf4b"></i>
+<i class="dt" style="left:52%;top:27%;width:6px;height:6px;background:#2f86b0"></i>
+<i class="dt" style="left:20%;top:42%;width:12px;height:12px;background:#a6d8e6"></i>
+
+<i class="dt" style="left:39%;top:64%;width:6px;height:6px;background:#8fd35c"></i>
+<i class="dt" style="left:11%;top:26%;width:8px;height:8px;background:#f2922e"></i>
+<i class="dt" style="left:76%;top:46%;width:6px;height:6px;background:#fbdf4b"></i>
+<i class="dt" style="left:78%;top:62%;width:10px;height:10px;background:#2f86b0"></i>
+<i class="dt" style="left:81%;top:73%;width:8px;height:8px;background:#a6d8e6"></i>
+<i class="dt" style="left:77%;top:76%;width:8px;height:8px;background:#f6a9b8"></i>
+</div>
   <header class="head">
     <div class="tallywrap" aria-label="Seus três níveis">
       <span class="bar1" aria-hidden="true"></span>
@@ -254,7 +383,7 @@ button.skipbtn:focus-visible{outline-color:var(--yellow)}
   <div class="table">
     <aside class="col l" aria-label="Sobre o ateliê">
       <div class="tile">
-        <svg class="face" aria-hidden="true"><use href="#f1"/></svg>
+        <svg class="face" aria-hidden="true"><use href="#i1"/></svg>
         <h3>Aulas extraclasse</h3>
         <p>Robótica, eletrônica e programação dentro do calendário da escola.</p>
       </div>
@@ -269,7 +398,7 @@ button.skipbtn:focus-visible{outline-color:var(--yellow)}
     </aside>
 
     <div class="center">
-      <div class="stagewrap"><div class="stage"><svg id="board" viewBox="0 0 860 720" role="img" aria-label="Bancada com a logo do Ateliê Maker. A lâmpada da logo é o LED. Arraste dos terminais dos aparelhos para ligar cabos."></svg></div></div>
+      <div class="stagewrap"><svg class="cloud a" aria-hidden="true"><use href="#cloud"/></svg><svg class="cloud b" aria-hidden="true"><use href="#cloud"/></svg><div class="stage"><svg id="board" viewBox="0 0 860 720" role="img" aria-label="Bancada com a logo do Ateliê Maker. A lâmpada da logo é o LED. Arraste dos terminais dos aparelhos para ligar cabos."></svg></div></div>
       <p class="status" id="status" aria-live="polite"></p>
       <div class="win" id="win" hidden>
         <h2 id="winTitle"></h2><p id="winText"></p><div class="row" id="winRow"></div>
@@ -283,12 +412,12 @@ button.skipbtn:focus-visible{outline-color:var(--yellow)}
 
     <aside class="col r" aria-label="Mais sobre o ateliê">
       <div class="tile pk">
-        <svg class="face" aria-hidden="true"><use href="#f2"/></svg>
+        <svg class="face" aria-hidden="true"><use href="#i2"/></svg>
         <h3>Objetos interativos</h3>
         <p>Instalações com sensores e microcontroladores, feitas sob encomenda.</p>
       </div>
       <div class="tile tl">
-        <svg class="face" aria-hidden="true"><use href="#f3"/></svg>
+        <svg class="face" aria-hidden="true"><use href="#i3"/></svg>
         <h3>Arduino</h3>
         <p>Oficinas de eletrônica em que você monta, testa e leva o projeto.</p>
       </div>
