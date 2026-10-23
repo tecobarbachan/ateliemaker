@@ -260,7 +260,7 @@ h1 mark{background:linear-gradient(transparent 56%,var(--sun) 56% 92%,transparen
 @media (max-width:1020px){.cloud.a{right:-14px;top:-30px}.cloud.b{left:-14px}.blob{opacity:.7}}
 @media (max-width:640px){.cloud{width:84px;height:50px}.cloud.b{display:none}.stagewrap::before{inset:-20px -10px -18px -10px}.cf:nth-of-type(n+14){display:none}.tile .face{width:84px;height:68px}}
 
-/* ===== v7: menu e páginas internas ===== */
+/* ===== v8: menu, páginas internas, listas ===== */
 .nav{display:flex;justify-content:space-between;align-items:center;gap:12px 22px;flex-wrap:wrap;margin-bottom:30px}
 .brand{display:flex;flex-direction:column;text-decoration:none;color:var(--navy);font-family:var(--display);font-size:28px;line-height:1}
 .brand small{font-family:var(--mono);font-weight:600;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ln);margin-top:4px}
@@ -269,11 +269,13 @@ h1 mark{background:linear-gradient(transparent 56%,var(--sun) 56% 92%,transparen
 .links a:hover{background:var(--sky)}
 .links a[aria-current="page"]{background:var(--sun)}
 .links a:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
-.page .hero{max-width:860px}
-.page h1{font-size:clamp(36px,6vw,72px)}
-.sec{margin-top:46px}
-.sec h2{font-size:clamp(28px,4.4vw,46px);line-height:1.02;margin:0 0 12px}
-.sec>p{max-width:62ch;margin:0 0 14px}
+.page .hero{max-width:880px}
+.page h1{font-size:clamp(34px,5.6vw,68px)}
+.sec{margin-top:54px;scroll-margin-top:20px}
+.sec h2{font-size:clamp(28px,4.4vw,46px);line-height:1.02;margin:0 0 14px}
+.sec>p,.prose p{max-width:66ch;margin:0 0 14px}
+.prose{max-width:66ch}
+.prose p.big{font-family:var(--display);font-size:clamp(22px,3vw,30px);line-height:1.1;color:var(--navy);margin:0 0 14px}
 .slab{display:flex;flex-direction:column;gap:10px}
 .slab .ico{width:116px;height:92px;margin-bottom:2px}
 .slab h3{font-size:clamp(24px,3vw,32px)}
@@ -281,10 +283,31 @@ h1 mark{background:linear-gradient(transparent 56%,var(--sun) 56% 92%,transparen
 .cta.cream{background:#fff4dc;color:var(--ink);box-shadow:0 5px 0 #b9a97f,inset 0 2px 0 #fff}
 .cta.cream:hover{background:#fff}
 .btnrow{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;padding-bottom:5px}
-.card.dd .cta.cream{color:var(--ink)}
-.page .foot{margin-top:50px}
-.lead{font-size:clamp(17px,2.2vw,21px);max-width:60ch;margin:0 0 6px}
+.page .foot{margin-top:56px}
+.lead{font-size:clamp(17px,2.2vw,21px);max-width:62ch;margin:0 0 12px}
 .sub{font-size:clamp(24px,3.6vw,38px);line-height:1.05;margin:34px 0 12px}
-.cards.c6{grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))}
+.cards.c4{grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr))}
+.cards.c3{grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}
+.cards.c2{grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))}
 .card .big2{display:block;font-family:var(--display);font-size:22px;line-height:1.05;margin:8px 0 4px}
+.card.mini{padding:14px 16px 16px}
+.card.mini h3{font-size:21px;margin:0 0 6px}
+.card.mini p{font-size:14.5px}
 .slab .chip{align-self:flex-start}
+a.chip{text-decoration:none}
+a.chip:hover{background:var(--sky)}
+.toc{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.linkcard{display:block;text-decoration:none;transition:transform .12s}
+.linkcard:hover{transform:translate(-2px,-2px)}
+.linkcard:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
+.linkcard .chip{margin-top:6px}
+.plus{display:grid;place-items:center;font-family:var(--display);font-size:46px;color:var(--ln)}
+.fusion{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:16px;align-items:stretch;margin:6px 0 20px}
+.lamp{display:inline-block;width:12px;height:12px;border-radius:50%;border:2px solid var(--ln);margin-right:8px;vertical-align:middle}
+.card.levels{padding:14px 16px}
+.card.levels .nv{font-family:var(--mono);font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.card.levels h3{font-size:24px;margin:2px 0 2px}
+.tick{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.tick li{position:relative;padding-left:30px}
+.tick li::before{content:"";position:absolute;left:3px;top:.42em;width:12px;height:12px;background:var(--sun);border:2px solid var(--ln);transform:rotate(45deg)}
+@media (max-width:720px){.fusion{grid-template-columns:1fr}.plus{font-size:36px;line-height:1}}

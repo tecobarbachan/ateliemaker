@@ -269,7 +269,7 @@ h1 mark{background:linear-gradient(transparent 56%,var(--sun) 56% 92%,transparen
 @media (max-width:1020px){.cloud.a{right:-14px;top:-30px}.cloud.b{left:-14px}.blob{opacity:.7}}
 @media (max-width:640px){.cloud{width:84px;height:50px}.cloud.b{display:none}.stagewrap::before{inset:-20px -10px -18px -10px}.cf:nth-of-type(n+14){display:none}.tile .face{width:84px;height:68px}}
 
-/* ===== v7: menu e páginas internas ===== */
+/* ===== v8: menu, páginas internas, listas ===== */
 .nav{display:flex;justify-content:space-between;align-items:center;gap:12px 22px;flex-wrap:wrap;margin-bottom:30px}
 .brand{display:flex;flex-direction:column;text-decoration:none;color:var(--navy);font-family:var(--display);font-size:28px;line-height:1}
 .brand small{font-family:var(--mono);font-weight:600;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ln);margin-top:4px}
@@ -278,11 +278,13 @@ h1 mark{background:linear-gradient(transparent 56%,var(--sun) 56% 92%,transparen
 .links a:hover{background:var(--sky)}
 .links a[aria-current="page"]{background:var(--sun)}
 .links a:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
-.page .hero{max-width:860px}
-.page h1{font-size:clamp(36px,6vw,72px)}
-.sec{margin-top:46px}
-.sec h2{font-size:clamp(28px,4.4vw,46px);line-height:1.02;margin:0 0 12px}
-.sec>p{max-width:62ch;margin:0 0 14px}
+.page .hero{max-width:880px}
+.page h1{font-size:clamp(34px,5.6vw,68px)}
+.sec{margin-top:54px;scroll-margin-top:20px}
+.sec h2{font-size:clamp(28px,4.4vw,46px);line-height:1.02;margin:0 0 14px}
+.sec>p,.prose p{max-width:66ch;margin:0 0 14px}
+.prose{max-width:66ch}
+.prose p.big{font-family:var(--display);font-size:clamp(22px,3vw,30px);line-height:1.1;color:var(--navy);margin:0 0 14px}
 .slab{display:flex;flex-direction:column;gap:10px}
 .slab .ico{width:116px;height:92px;margin-bottom:2px}
 .slab h3{font-size:clamp(24px,3vw,32px)}
@@ -290,13 +292,34 @@ h1 mark{background:linear-gradient(transparent 56%,var(--sun) 56% 92%,transparen
 .cta.cream{background:#fff4dc;color:var(--ink);box-shadow:0 5px 0 #b9a97f,inset 0 2px 0 #fff}
 .cta.cream:hover{background:#fff}
 .btnrow{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;padding-bottom:5px}
-.card.dd .cta.cream{color:var(--ink)}
-.page .foot{margin-top:50px}
-.lead{font-size:clamp(17px,2.2vw,21px);max-width:60ch;margin:0 0 6px}
+.page .foot{margin-top:56px}
+.lead{font-size:clamp(17px,2.2vw,21px);max-width:62ch;margin:0 0 12px}
 .sub{font-size:clamp(24px,3.6vw,38px);line-height:1.05;margin:34px 0 12px}
-.cards.c6{grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))}
+.cards.c4{grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr))}
+.cards.c3{grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}
+.cards.c2{grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))}
 .card .big2{display:block;font-family:var(--display);font-size:22px;line-height:1.05;margin:8px 0 4px}
+.card.mini{padding:14px 16px 16px}
+.card.mini h3{font-size:21px;margin:0 0 6px}
+.card.mini p{font-size:14.5px}
 .slab .chip{align-self:flex-start}
+a.chip{text-decoration:none}
+a.chip:hover{background:var(--sky)}
+.toc{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.linkcard{display:block;text-decoration:none;transition:transform .12s}
+.linkcard:hover{transform:translate(-2px,-2px)}
+.linkcard:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
+.linkcard .chip{margin-top:6px}
+.plus{display:grid;place-items:center;font-family:var(--display);font-size:46px;color:var(--ln)}
+.fusion{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:16px;align-items:stretch;margin:6px 0 20px}
+.lamp{display:inline-block;width:12px;height:12px;border-radius:50%;border:2px solid var(--ln);margin-right:8px;vertical-align:middle}
+.card.levels{padding:14px 16px}
+.card.levels .nv{font-family:var(--mono);font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.card.levels h3{font-size:24px;margin:2px 0 2px}
+.tick{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.tick li{position:relative;padding-left:30px}
+.tick li::before{content:"";position:absolute;left:3px;top:.42em;width:12px;height:12px;background:var(--sun);border:2px solid var(--ln);transform:rotate(45deg)}
+@media (max-width:720px){.fusion{grid-template-columns:1fr}.plus{font-size:36px;line-height:1}}
 </style>
 </head>
 <body>
@@ -397,10 +420,8 @@ h1 mark{background:linear-gradient(transparent 56%,var(--sun) 56% 92%,transparen
 <i class="dt" style="left:77%;top:76%;width:8px;height:8px;background:#f6a9b8"></i>
 </div>
     <nav class="nav" aria-label="Principal">
-    <a class="brand" href="./">Ateliê Maker<small>Pelotas · RS</small></a>
-    <div class="links">
-      <a href="./" aria-current="page">Início</a><a href="cursos.html">Cursos</a><a href="projetos.html">Projetos</a><a href="quem-somos.html">Quem somos</a><a href="contato.html">Contato</a>
-    </div>
+    <a class="brand" href="./">Ateliê MAKER<small>Pelotas · RS</small></a>
+    <div class="links"><a href="./" aria-current="page">Início</a><a href="o-atelie.html">O ateliê</a><a href="cursos.html">Cursos</a><a href="projetos.html">Projetos</a><a href="quem-somos.html">Quem somos</a><a href="contato.html">Contato</a></div>
   </nav>
   <header class="head">
     <div class="tallywrap" aria-label="Seus três níveis">
@@ -408,11 +429,11 @@ h1 mark{background:linear-gradient(transparent 56%,var(--sun) 56% 92%,transparen
       <div class="tally" id="pips"></div>
     </div>
     <div>
-      <p class="kick">Quer saber mais sobre o Ateliê Maker?</p>
+      <p class="kick">Quer saber mais sobre o Ateliê MAKER?</p>
       <h1>Ligue os <mark>três níveis</mark> de circuito!</h1>
       <p class="lede">Puxe um cabo de um terminal até outro. Vermelho é o +, azul é o −. Toque num cabo para tirá-lo e arraste os aparelhos para onde quiser (só a logo fica parada). A corrente sai do + da bateria e precisa voltar pelo −.</p>
     </div>
-    <div class="ticket" aria-hidden="true">Admit one<b>Ateliê Maker</b><div>Nº 2026 · Pelotas/RS<br>Mão na massa</div></div>
+    <div class="ticket" aria-hidden="true">Admit one<b>Ateliê MAKER</b><div>Nº 2026 · Pelotas/RS<br>Mão na massa</div></div>
   </header>
 
   <div class="table">
@@ -420,20 +441,20 @@ h1 mark{background:linear-gradient(transparent 56%,var(--sun) 56% 92%,transparen
       <div class="tile">
         <svg class="face" aria-hidden="true"><use href="#i1"/></svg>
         <h3>Aulas extraclasse</h3>
-        <p>Robótica, eletrônica e programação dentro do calendário da escola.</p>
+        <p>Atividades integradas ao calendário da escola, com turmas por faixa etária.</p>
       </div>
       <svg class="coiled" viewBox="0 0 220 64" aria-hidden="true"><path d="M110 0V10C110 26 70 14 76 30C82 46 118 34 112 20C106 8 146 18 140 40C136 52 118 56 110 64" fill="none" stroke="#3f8f84" stroke-width="3.4" stroke-linecap="round"/><rect x="102" y="0" width="16" height="9" rx="2" fill="#e8782b"/></svg>
       <div class="note">
         <svg class="spiral" viewBox="0 0 220 32" preserveAspectRatio="none" aria-hidden="true"><ellipse cx="10" cy="16" rx="7" ry="12" transform="rotate(-18 10 16)" fill="none" stroke="#e8782b" stroke-width="3.2"/><ellipse cx="27" cy="16" rx="7" ry="12" transform="rotate(-18 27 16)" fill="none" stroke="#e8782b" stroke-width="3.2"/><ellipse cx="44" cy="16" rx="7" ry="12" transform="rotate(-18 44 16)" fill="none" stroke="#e8782b" stroke-width="3.2"/><ellipse cx="61" cy="16" rx="7" ry="12" transform="rotate(-18 61 16)" fill="none" stroke="#e8782b" stroke-width="3.2"/><ellipse cx="78" cy="16" rx="7" ry="12" transform="rotate(-18 78 16)" fill="none" stroke="#e8782b" stroke-width="3.2"/><ellipse cx="95" cy="16" rx="7" ry="12" transform="rotate(-18 95 16)" fill="none" stroke="#e8782b" stroke-width="3.2"/><ellipse cx="112" cy="16" rx="7" ry="12" transform="rotate(-18 112 16)" fill="none" stroke="#e8782b" stroke-width="3.2"/><ellipse cx="129" cy="16" rx="7" ry="12" transform="rotate(-18 129 16)" fill="none" stroke="#e8782b" stroke-width="3.2"/><ellipse cx="146" cy="16" rx="7" ry="12" transform="rotate(-18 146 16)" fill="none" stroke="#e8782b" stroke-width="3.2"/><ellipse cx="163" cy="16" rx="7" ry="12" transform="rotate(-18 163 16)" fill="none" stroke="#e8782b" stroke-width="3.2"/><ellipse cx="180" cy="16" rx="7" ry="12" transform="rotate(-18 180 16)" fill="none" stroke="#e8782b" stroke-width="3.2"/><ellipse cx="197" cy="16" rx="7" ry="12" transform="rotate(-18 197 16)" fill="none" stroke="#e8782b" stroke-width="3.2"/></svg>
-        <h3>Mão na Massa</h3>
-        <p>Cada encontro parte de um desafio e termina num objeto que funciona. Errar faz parte.</p>
+        <h3>Caderno de ideias</h3>
+        <p>Antes do circuito, da madeira ou do código, vem o traço.</p>
       </div>
       <div class="keys" aria-hidden="true"><span class="k1">ESC</span><span class="k2">LUZ</span><span class="k3">ENTR</span></div>
       <svg class="zig" viewBox="0 0 220 40" aria-hidden="true"><path d="M6 30L26 8L46 30L66 8L86 30L106 8L126 30L146 8L166 30L186 8L206 30" fill="none" stroke="#2b78b5" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="212" cy="8" r="5" fill="#e5483b"/></svg>
     </aside>
 
     <div class="center">
-      <div class="stagewrap"><svg class="cloud a" aria-hidden="true"><use href="#cloud"/></svg><svg class="cloud b" aria-hidden="true"><use href="#cloud"/></svg><div class="stage"><svg id="board" viewBox="0 0 860 720" role="img" aria-label="Bancada com a logo do Ateliê Maker. A lâmpada da logo é o LED. Arraste dos terminais dos aparelhos para ligar cabos."></svg></div></div>
+      <div class="stagewrap"><svg class="cloud a" aria-hidden="true"><use href="#cloud"/></svg><svg class="cloud b" aria-hidden="true"><use href="#cloud"/></svg><div class="stage"><svg id="board" viewBox="0 0 860 720" role="img" aria-label="Bancada com a logo do Ateliê MAKER. A lâmpada da logo é o LED. Arraste dos terminais dos aparelhos para ligar cabos."></svg></div></div>
       <p class="status" id="status" aria-live="polite"></p>
       <div class="win" id="win" hidden>
         <h2 id="winTitle"></h2><p id="winText"></p><div class="row" id="winRow"></div>
@@ -449,12 +470,12 @@ h1 mark{background:linear-gradient(transparent 56%,var(--sun) 56% 92%,transparen
       <div class="tile pk">
         <svg class="face" aria-hidden="true"><use href="#i2"/></svg>
         <h3>Objetos interativos</h3>
-        <p>Instalações com sensores e microcontroladores, feitas sob encomenda.</p>
+        <p>Para feiras, salas de aula e marcas, feitos sob demanda.</p>
       </div>
       <div class="tile tl">
         <svg class="face" aria-hidden="true"><use href="#i3"/></svg>
         <h3>Arduino</h3>
-        <p>Oficinas de eletrônica em que você monta, testa e leva o projeto.</p>
+        <p>Sensores, luz, som e movimento dando vida a esculturas.</p>
       </div>
       <div class="burst" aria-hidden="true">
         <svg viewBox="0 0 220 220"><polygon points="110.0,12.5 123.1,44.2 149.1,15.7 146.7,55.1 181.1,38.9 168.3,71.0 196.7,74.1 180.7,95.9 203.5,110.0 179.7,123.9 196.8,146.0 165.1,146.8 180.0,180.0 152.5,173.7 146.3,197.5 123.3,176.8 110.0,211.8 94.7,186.8 71.3,203.4 70.8,168.7 34.6,185.4 55.4,146.5 13.0,150.2 42.3,123.5 15.0,110.0 44.6,97.0 20.1,72.8 46.5,67.5 42.4,42.4 69.4,49.2 71.0,15.8 96.3,41.1" fill="#f2c52e" stroke="#e8782b" stroke-width="4" stroke-linejoin="round"/><path d="M40 150C28 110 70 70 120 84C170 98 168 148 126 150C92 152 90 112 124 112" fill="none" stroke="#fff6d6" stroke-width="3" stroke-linecap="round" opacity=".8"/></svg>
@@ -479,38 +500,32 @@ h1 mark{background:linear-gradient(transparent 56%,var(--sun) 56% 92%,transparen
     <div class="vert" aria-hidden="true">Materializamos o imaginário</div>
   </section>
 
-  <section class="drawer" id="atelie" aria-label="Dentro do Ateliê Maker">
+  <section class="drawer" id="atelie" aria-label="Dentro do Ateliê MAKER">
     <div class="lock" id="lock">
       <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="14" width="22" height="15" rx="3" fill="#f2c52e" stroke="#3a2d2a" stroke-width="2.4"/><path d="M10 14V10a6 6 0 0 1 12 0v4" fill="none" stroke="#3a2d2a" stroke-width="2.6"/><circle cx="16" cy="21.5" r="2.2" fill="#3a2d2a"/></svg>
-      <p>Aqui dentro está o programa do ateliê e o jeito de falar com a gente. A gaveta abre quando a lâmpada da logo acender nos três níveis.</p>
+      <p>Aqui dentro estão as boas-vindas ao ateliê e os caminhos para o resto do site. A gaveta abre quando a lâmpada da logo acender nos três níveis.</p>
     </div>
     <div class="inside" id="inside" hidden>
-      <h2 id="insideTitle" tabindex="-1">Materializamos o imaginário</h2>
+      <h2 id="insideTitle" tabindex="-1">Boas-vindas ao Ateliê MAKER</h2>
       <p class="skipnote" id="skipnote" hidden>Tudo bem não saber ligar ainda. É exatamente isso que se aprende aqui. Quando quiser, volte lá em cima e acenda a lâmpada.</p>
-      <p class="lead">Um programa de cultura maker para escolas que transforma curiosidade em criação, com arte, eletrônica e programação.</p>
-      <h3 class="sub">Aprender é colocar a mão no mundo.</h3>
-      <div class="cards">
-        <article class="card y"><span class="chip">01</span><span class="big2">Imaginar, testar, refazer.</span></article>
-        <article class="card p"><span class="chip">02</span><span class="big2">Circuitos que contam histórias.</span></article>
-        <article class="card t"><span class="chip">03</span><span class="big2">Criar junto muda tudo.</span></article>
+      <div class="prose">
+        <p class="lead">O Ateliê MAKER é um lugar onde as ideias saem da cabeça e ganham corpo. Aqui, crianças, jovens e adultos desenham, constroem, testam, erram, consertam e, no fim, seguram nas mãos algo que antes só existia na imaginação.</p>
+        <p>Unimos duas tradições que parecem distantes, mas falam a mesma língua: o ateliê do artista e a cultura maker. O resultado é uma experiência de aprendizagem viva, coletiva e cheia de sentido, em que arte, ciência e tecnologia caminham juntas.</p>
+        <p class="big">Materializamos o imaginário. Esse é o nosso jeito de ensinar, criar e enxergar o mundo.</p>
       </div>
-      <h3 class="sub">Uma ideia só existe quando ganha corpo.</h3>
-      <p>Cada experiência aproxima estudantes de linguagens, ferramentas e perguntas que atravessam o presente.</p>
-      <div class="cards c6">
-        <article class="card"><h3>Pensamento científico, crítico e criativo</h3><p>Por meio da investigação e da resolução de problemas.</p></article>
-        <article class="card p"><h3>Repertório cultural</h3><p>Ao articular arte, estética e tecnologia.</p></article>
-        <article class="card y"><h3>Comunicação</h3><p>Incentivando a escuta, a troca de ideias e a apresentação de processos.</p></article>
-        <article class="card t"><h3>Cultura digital</h3><p>Com uso crítico e criativo de tecnologias.</p></article>
-        <article class="card b"><h3>Trabalho e projeto de vida</h3><p>Ao valorizar autonomia, protagonismo e colaboração.</p></article>
-        <article class="card"><h3>Responsabilidade e cidadania</h3><p>Promovendo o fazer coletivo e o respeito aos processos.</p></article>
-      </div>
+      <h3 class="sub">Por onde começar</h3>
+      <div class="cards c4">
+    <a class="card y linkcard" href="o-atelie.html"><h3>O ateliê</h3><p>Cultura maker, o que é um ateliê e a fusão dos dois.</p><span class="chip">Ler mais →</span></a>
+    <a class="card t linkcard" href="cursos.html"><h3>Cursos</h3><p>Mão na Massa, Arduino, serigrafia e o que fazemos.</p><span class="chip">Ler mais →</span></a>
+    <a class="card p linkcard" href="projetos.html"><h3>Projetos</h3><p>Objetos interativos e o arquivo vivo do ateliê.</p><span class="chip">Ler mais →</span></a>
+    <a class="card b linkcard" href="quem-somos.html"><h3>Quem somos</h3><p>Um coletivo de gente que cria com as mãos.</p><span class="chip">Ler mais →</span></a>
+  </div>
       <div class="cards" style="grid-template-columns:1fr;margin-top:30px">
-        <article class="card d"><h3>Vamos imaginar uma escola que também é ateliê?</h3><p>Idealizado pelo Dr. André Barbachan, artista visual e doutor em Poéticas Visuais, o Ateliê Maker cria experiências de aprendizagem para escolas que querem experimentar mais.</p>
-          <div class="btnrow"><a class="cta" href="https://wa.me/5553981183795?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Ateli%C3%AA%20MAKER%20e%20gostaria%20de%20conversar.">Conversar com o Ateliê</a><a class="cta cream" href="cursos.html">Ver cursos</a><a class="cta cream" href="projetos.html">Ver projetos</a></div></article>
+        <article class="card d"><h3>Venha materializar o imaginário com a gente.</h3><p>Fale conosco para conhecer as modalidades, montar uma proposta para sua escola ou desenvolver um objeto interativo sob medida.</p><div class="btnrow"><a class="cta" href="https://wa.me/5553981183795?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Ateli%C3%AA%20MAKER%20e%20gostaria%20de%20conversar.">Conversar pelo WhatsApp</a><a class="cta cream" href="https://www.instagram.com/ateliemaker/">Instagram @ateliemaker</a><a class="cta cream" href="mailto:ateliemkr@gmail.com">ateliemkr@gmail.com</a></div></article>
       </div>
     </div>
   </section>
-  <p class="foot">Ateliê Maker · Pelotas, RS · Materializamos o imaginário</p>
+  <p class="foot">Ateliê MAKER · Pelotas, RS · Materializamos o imaginário</p>
 </main>
 
 <script>
